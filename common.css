@@ -1,0 +1,9 @@
+.common_flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.common_content {
+  flex: 1 auto;
+}

@@ -1,0 +1,7 @@
+:root {
+  /* 색상 */
+  --main-bg: #fff;
+  --btn-bg: #64a8ff; /* 카카오 Yellow 일때 */
+  --btn-hover: #e8f3ff; /* 버튼 배경이 흰색일 때 */
+  --tile-bg: #4593fc; /*배경이 노랑색일 때 */
+}

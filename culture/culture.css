@@ -1,2 +1,94 @@
 * {
 }
+
+:root {
+  --viewport1440: 1440;
+  --viewport768: 768;
+  --viewport320: 320;
+  --vwPercent: 100vw;
+  --viewport-height: 100dvh;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Pretendard", sans-serif;
+  fotn-weight: 400;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.common_content {
+  height: 100dvh;
+}
+
+.vid-cont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(var(--viewport-height) - 92px);
+  & video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: calc(1486 / var(--viewport1440) * var(vwPercent));
+  }
+}
+
+.mission-fullpage {
+  height: 770px;
+}
+.mission-wrap {
+  height: 100vh;
+  width: 100%;
+  border: 1px solid red;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.mission-cont {
+  width: 100rem;
+  height: 80vh;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+.mission-title {
+  font-size: calc(30 / var(--viewport1440) * var(--vwPercent));
+  line-height: 1.4;
+}
+.mission-img {
+  display: block;
+  width: calc(88 / var(--viewport1440) * var(--vwPercent));
+  height: calc(88 / var(--viewport1440) * var(--vwPercent));
+  position: absolute;
+}
+.icon-person {
+  top: calc(580 / var(--viewport1440) * var(--vwPercent));
+  left: calc(460 / var(--viewport1440) * var(--vwPercent));
+}
+.icon-house {
+  top: 60rem;
+  left: 80rem;
+}
+.icon-wallet {
+  top: 80rem;
+  left: 80rem;
+}
+.icon-bubble {
+  top: 60rem;
+  left: 80rem;
+}

@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
 
     <script src="../includeHTML.js"></script>
-    <link rel="stylesheet" href="../common.css">
-    <link rel="stylesheet" href="culture.css">
-</head>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="culture.css" />
+    <link rel="stylesheet" href="../global.css" />
+  </head>
 
-<body>
+  <body>
     <div class="common_flex">
-        <header include-html="../common/header/header.html"></header>
-        <div class="common_content"></div>
-        <footer include-html="../common/footer/footer.html"></footer>
+      <header include-html="../common/header/header.html"></header>
+      <div class="common_content">
+        <div class="vid-cont">
+          <video
+            data-v-9858e124=""
+            data-v-507305f9=""
+            src="//t1.kakaocdn.net/kakaocorp/kakaocorp/service/culture/video_intro_320.mp4"
+            poster="//t1.kakaocdn.net/kakaocorp/kakaocorp/service/culture/poster/img_intro_320.png"
+            muted="muted"
+            loop="loop"
+            playsinline=""
+            type="video/mp4"
+            class="visual_intro"
+            autoplay="autoplay"
+          ></video>
+        </div>
+        <div class="mission-fullpage">
+          <div class="mission-wrap">
+            <div class="mission-cont">
+              <img
+                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/culture/ico_person.png"
+                class="mission-img icon-person"
+              />
+              <img
+                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/culture/ico_shop.png"
+                class="mission-img icon-house"
+              />
+              <strong class="mission-title">
+                사람을 이해하는 기술로
+                <br />
+                필요한 미래를 더 가깝게 만듭니다
+              </strong>
+              <img
+                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/culture/ico_wallet.png"
+                class="mission-img icon-wallet"
+              />
+              <img
+                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/culture/ico_bubble.png"
+                class="mission-img icon-bubble"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer include-html="../common/footer/footer.html"></footer>
     </div>
-</body>
+  </body>
 
-<script>
+  <script>
     includeHTML();
-</script>
-
+  </script>
 </html>

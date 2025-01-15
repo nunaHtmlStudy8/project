@@ -5,5 +5,15 @@
 }
 
 .common_content {
+}
+
+.common_content {
   flex: 1 auto;
+}
+
+:root {
+  --main-bg: #fff;
+  --btn-bg: #64a8ff;
+  --btn-hover: #e8f3ff;
+  --tile-bg: #4593fc;
 }

@@ -363,6 +363,5 @@ section {
     margin-left: calc(14 / var(--viewport1440) * var(--vwPercent));
     background: #ffffff;
     border-radius: 50%;
-    border: 1px solid black;
   }
 }

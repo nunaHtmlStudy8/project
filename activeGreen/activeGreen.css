@@ -1,23 +1,69 @@
+:root {
+    /* 폰트사이즈 */
+    --font-title-xl: 42px;
+    --font-title-lg: 36px;
+    --font-title-md: 32px;
+    --font-title-sm: 28px;
+
+    --font-xl: 24px;
+    --font-lg: 22px;
+    --font-md: 20px;
+    --font-base: 18px;
+    --font-sm: 16px;
+    --font-xs: 14px;
+    --font-xxs: 12px;
+}
+
+
+/* 768px 이하 태블릿 */
+@media screen and (max-width: 768px) {
+    :root {
+        --font-display: 80px;
+        --font-title-xl: 28px;
+        --font-title-lg: 26px;
+        --font-title-md: 24px;
+        --font-title-sm: 20px;
+        --font-title-xs: 18px;
+        --font-lg: 18px;
+        --font-md: 16px;
+    }
+}
+
+/* 480px 이하 모바일 */
+@media screen and (max-width: 480px) {
+    :root {
+        --font-display: 60px;
+        --font-title-xxl: 35px;
+        --font-title-xl: 28px;
+        --font-title-lg: 24px;
+        --font-title-md: 22px;
+        --font-lg: 18px;
+        --font-md: 16px;
+        --font-base: 15px;
+        --font-sm: 14px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: 'Pretendard', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #333;
+    color: #000;
 }
 
 .box_shadow {
     box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, .09);
 }
 
-
 .activeGreen_wrap {
-    max-width: 70%;
+    overflow: hidden;
+}
+
+.activeGreen_content_article {
+    position: relative;
+    max-width: 80%;
     margin: 0 auto;
+    padding-bottom: 182px;
 }
 
 .activeGreen_header {
@@ -54,13 +100,13 @@ body {
 }
 
 .activeGreen_header_subtitle {
-    font-size: 36px;
+    font-size: var(--font-title-lg);
     font-weight: 400;
     margin: 15px auto;
 }
 
 .activeGreen_header_desc {
-    font-size: 20px;
+    font-size: var(--font-md);
     color: #666;
     line-height: 25px;
 }
@@ -80,8 +126,6 @@ body {
 }
 
 .activeGreen_carbonIndex_info-box_bnr {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -123,15 +167,15 @@ body {
 
 .activeGreen_carbonIndex_unit {
     display: inline-block;
-    margin-left: 12px;
-    font-size: 42px;
+    margin-left: 0;
+    font-size: var(--font-title-xl);
     letter-spacing: -3px;
 }
 
 .activeGreen_carbonIndex_button {
     margin-top: 32px;
     padding: 17px 56px;
-    font-size: 18px;
+    font-size: var(--font-base);
     letter-spacing: -1.8px;
     color: #fff;
     background: #000;
@@ -141,7 +185,7 @@ body {
 }
 
 .activeGreen_carbonIndex_footer {
-    margin: 16px 0 0 40px;
+    margin: 16px 0;
     font-size: 14px;
     letter-spacing: -.3px;
 }
@@ -183,7 +227,7 @@ body {
 .activeGreen_carbonIndex_info .desc_item {
     display: block;
     margin: 12px 0 0;
-    font-size: 18px;
+    font-size: var(--font-base);
 }
 
 .activeGreen_carbonIndex_info .box_item .item_2 {
@@ -210,19 +254,10 @@ body {
     color: #333;
 }
 
-.screen_out {
-    position: absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    line-height: 0;
-    text-indent: -9999px;
-}
-
 /* 카카오를 통해 전환하기 */
 .activeGreen_transform_mainTitle {
     margin-bottom: 64px;
-    font-size: 42px;
+    font-size: var(--font-title-xl);
     letter-spacing: -.5px;
     line-height: 62px;
     text-align: center;
@@ -268,7 +303,7 @@ body {
 }
 
 .activeGreen_transform_title {
-    font-size: 32px;
+    font-size: var(--font-title-md);
     letter-spacing: -.5px;
 }
 
@@ -277,7 +312,7 @@ body {
     z-index: 100;
     display: block;
     margin-top: 12px;
-    font-size: 18px;
+    font-size: var(--font-base);
     line-height: 25px;
 }
 
@@ -354,8 +389,10 @@ body {
     background: white;
     padding: 40px;
     border-radius: 12px;
-    width: 90%;
+    width: 80%;
     max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .activeGreen_modal_close {
@@ -378,12 +415,12 @@ body {
 }
 
 .activeGreen_modal_inner h3 {
-    font-size: 28px;
+    font-size: var(--font-title-sm);
     margin-bottom: 24px;
 }
 
 .activeGreen_modal_desc {
-    font-size: 16px;
+    font-size: var(--font-sm);
     line-height: 1.6;
     color: #000;
     margin-bottom: 32px;
@@ -411,20 +448,20 @@ body {
 .stat_item strong {
     display: block;
     margin-bottom: 12px;
-    font-size: 22px;
+    font-size: var(--font-lg);
     line-height: 33px;
     letter-spacing: -.86px;
 }
 
 .stat_item p {
-    font-size: 15px;
+    font-size: var(--font-xs);
     line-height: 20px;
     letter-spacing: -.47px;
 }
 
 .activeGreen_modal_subtitle {
     display: block;
-    font-size: 18px;
+    font-size: var(--font-base);
     font-weight: 700;
     line-height: 33px;
     letter-spacing: -0.86px;
@@ -449,28 +486,10 @@ body {
 /* 카카오를 통해 순환에 참여하기 */
 .activeGreen_cycle_mainTitle {
     margin-bottom: 64px;
-    font-size: 42px;
+    font-size: var(--font-title-xl);
     letter-spacing: -.5px;
     line-height: 62px;
     text-align: center;
-}
-
-.emph_tit {
-    position: relative;
-    color: #000;
-    white-space: nowrap;
-}
-
-.emph_tit:after {
-    position: absolute;
-    top: 0;
-    left: -5px;
-    z-index: -1;
-    width: calc(100% + 20px);
-    height: calc(100% + 10px);
-    background: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/activegreen/emph_txt.png) no-repeat;
-    background-size: 90% 90%;
-    content: "";
 }
 
 .activeGreen_cycle {
@@ -512,7 +531,7 @@ body {
 }
 
 .activeGreen_cycle_title {
-    font-size: 32px;
+    font-size: var(--font-title-md);
     letter-spacing: -.5px;
     line-height: 1.3;
 }
@@ -522,7 +541,7 @@ body {
     z-index: 100;
     display: block;
     margin-top: 12px;
-    font-size: 18px;
+    font-size: var(--font-base);
     color: #000;
     line-height: 25px;
 }
@@ -531,7 +550,7 @@ body {
     left: 32px;
     bottom: 32px;
     width: 260px;
-    height: 72px;
+    height: auto;
     position: absolute;
 }
 
@@ -580,7 +599,7 @@ body {
 /* 카카오를 통해 그린 디지털 설정하기 */
 .activeGreen_digital_mainTitle {
     margin-bottom: 64px;
-    font-size: 42px;
+    font-size: var(--font-title-xl);
     letter-spacing: -.5px;
     line-height: 62px;
     text-align: center;
@@ -633,7 +652,7 @@ body {
 }
 
 .activeGreen_digital_number {
-    font-size: 32px;
+    font-size: var(--font-title-md);
     font-weight: bold;
     color: #000;
     line-height: 1;
@@ -672,7 +691,7 @@ body {
 /* 카카오와 함께 자연보존에 나서기 */
 .activeGreen_nature_mainTitle {
     margin-bottom: 64px;
-    font-size: 42px;
+    font-size: var(--font-title-xl);
     letter-spacing: -.5px;
     line-height: 62px;
     text-align: center;
@@ -735,7 +754,7 @@ body {
 
 .nature_text {
     color: #fff;
-    font-size: 32px;
+    font-size: var(--font-title-md);
     line-height: 1.4;
     font-weight: bold;
 }
@@ -768,7 +787,7 @@ body {
 
 .nature_title {
     color: #000;
-    font-size: 32px;
+    font-size: var(--font-title-md);
     line-height: 1.4;
     font-weight: bold;
     text-align: center;
@@ -811,7 +830,6 @@ body {
 .plus_icon {
     font-size: 24px;
     color: #000;
-    line-height: 1;
 }
 
 /* 가위 구분선 */
@@ -833,14 +851,14 @@ body {
 }
 
 .environment_title {
-    font-size: 42px;
+    font-size: var(--font-title-xl);
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 24px;
 }
 
 .environment_desc {
-    font-size: 20px;
+    font-size: var(--font-md);
     line-height: 1.6;
     color: #666;
 }
@@ -903,7 +921,7 @@ body {
 
 .activeGreen_reference_title {
     width: 445px;
-    font-size: 32px;
+    font-size: var(--font-title-md);
     letter-spacing: -.89px;
     line-height: 47px;
     text-align: left;
@@ -913,7 +931,7 @@ body {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 18px;
+    font-size: var(--font-base);
     letter-spacing: -.5px;
     line-height: 1.78;
     color: #333;
@@ -927,7 +945,7 @@ body {
 }
 
 .activeGreen_reference_number {
-    font-size: 16px;
+    font-size: var(--font-sm);
     color: #333;
     flex-shrink: 0;
 }
@@ -946,12 +964,69 @@ body {
     color: #000;
 }
 
+.mobile-break,
+.tablet-break {
+    display: none;
+}
 
-/* 1440px 이하 디바이스 */
-@media screen and (max-width: 1440px) {
-    .activeGreen_wrap {
-        max-width: 90%;
+.activeGreen_modal_content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.activeGreen_modal_content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.activeGreen_modal_content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.activeGreen_modal_content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* 1439px 이하 디바이스 */
+@media screen and (max-width: 1439px) {
+    .environment_link_text {
+        font-size: var(--font-md);
     }
+
+    .activeGreen_reference_title {
+        margin-bottom: 20px;
+    }
+
+    .activeGreen_reference {
+        flex-direction: column;
+    }
+
+    .info_section {
+        margin-bottom: 150px;
+    }
+
+    .activeGreen_carbonIndex_info .box_item .inner_item {
+        padding-top: 176px;
+        background-size: 210px 162px;
+    }
+
+    .activeGreen_carbonIndex_number {
+        font-size: 88px;
+    }
+
+    .activeGreen_carbonIndex_info .tit_item {
+        font-size: var(--font-xl)
+    }
+
+    .activeGreen_carbonIndex_info .desc_item {
+        font-size: var(--font-xs);
+    }
+
+    .activeGreen_carbonIndex_info .btn_footnote {
+        font-size: var(--font-xxs);
+    }
+
 
     .activeGreen_transform,
     .activeGreen_cycle,
@@ -962,19 +1037,41 @@ body {
 
     .activeGreen_transform_content,
     .activeGreen_cycle_content {
-        min-height: 320px;
-        padding: 32px 24px;
+        min-height: 260px;
+        padding: 28px;
+    }
+
+    .activeGreen_transform_icon,
+    .activeGreen_cycle_icon {
+        right: 32px;
+        bottom: 72px;
+        width: 150px;
+        height: auto;
+    }
+
+    .activeGreen_transform_item:nth-child(2) .activeGreen_transform_icon {
+        right: 52px;
+        bottom: 62px;
+        width: 120px;
+        height: auto;
+    }
+
+    .activeGreen_cycle_item:nth-child(1) .activeGreen_cycle_icon {
+        right: 0;
+        bottom: 0;
+        width: 90%;
+        height: auto;
     }
 
     .activeGreen_transform_title,
     .activeGreen_cycle_title {
-        font-size: 28px;
+        font-size: var(--font-title-sm);
         max-width: 60%;
     }
 
     .activeGreen_transform_desc,
     .activeGreen_cycle_desc {
-        font-size: 16px;
+        font-size: var(--font-sm);
         max-width: 60%;
     }
 
@@ -984,18 +1081,6 @@ body {
         bottom: 40px;
     }
 
-    .activeGreen_transform_icon {
-        width: 200px;
-        height: auto;
-        right: 24px;
-        bottom: 40px;
-    }
-
-    .activeGreen_cycle_icon {
-        width: 200px;
-        height: auto;
-        right: 24px;
-    }
 
     .activeGreen_digital {
         grid-template-columns: repeat(3, 1fr);
@@ -1011,10 +1096,122 @@ body {
     }
 }
 
+/* 1024px 이하 태블릿 */
+@media screen and (max-width: 1024px) {
+
+    .activeGreen_transform_button,
+    .activeGreen_cycle_button,
+    .activeGreen_nature_button {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .environment_link_list {
+        flex-direction: column;
+    }
+
+    .activeGreen_transform_content,
+    .activeGreen_cycle_content {
+        min-height: 240px;
+        padding: 24px;
+    }
+
+    .activeGreen_transform_icon,
+    .activeGreen_cycle_icon {
+        right: 22px;
+        bottom: 82px;
+        width: 100px;
+        height: auto;
+    }
+
+    .activeGreen_transform_item:nth-child(2) .activeGreen_transform_icon {
+        right: 22px;
+        bottom: 82px;
+        width: 80px;
+        height: auto;
+    }
+
+    .activeGreen_transform_number,
+    .activeGreen_cycle_number {
+        width: 180px;
+        bottom: 30px;
+    }
+
+    .activeGreen_transform_desc,
+    .activeGreen_cycle_desc {
+        font-size: var(--font-base);
+        line-height: 22px;
+    }
+
+    .activeGreen_transform_title,
+    .activeGreen_cycle_title {
+        font-size: var(--font-xl);
+    }
+
+    .divider_wrap {
+        margin-bottom: 120px;
+    }
+
+    .info_section {
+        margin-bottom: 120px;
+    }
+
+
+    .activeGreen_carbonIndex_info .box_item .inner_item {
+        padding-top: 126px;
+        background-size: 142px 112px;
+    }
+
+    .tablet-break {
+        display: block;
+    }
+
+    .activeGreen_header_title {
+        font-size: var(--font-title-xl);
+    }
+
+    .activeGreen_header_subtitle {
+        font-size: var(--font-title-sm);
+    }
+
+    .activeGreen_header img {
+        width: 50px;
+    }
+
+    .activeGreen_carbonIndex_info-box_bnr {
+        height: 450px;
+    }
+}
+
 /* 768px 이하 태블릿 */
 @media screen and (max-width: 768px) {
-    .activeGreen_wrap {
-        max-width: 95%;
+    .activeGreen_reference_title {
+        margin-bottom: 10px;
+    }
+
+    .divider_wrap {
+        margin-bottom: 80px;
+    }
+
+    .info_section {
+        margin-bottom: 90px;
+    }
+
+    .activeGreen_carbonIndex_info .box_item .inner_item {
+        padding-top: 196px;
+        background-size: 240px 180px;
+    }
+
+    .mobile-break {
+        display: block;
+    }
+
+    .tablet-break {
+        display: none;
+    }
+
+    .section_activeGreen {
+        padding-top: 56px;
     }
 
     .activeGreen_header_title {
@@ -1022,17 +1219,26 @@ body {
     }
 
     .activeGreen_header_subtitle {
-        font-size: 28px;
+        font-size: var(--font-xl);
         line-height: 1.4;
     }
 
     .activeGreen_header_desc {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: var(--font-lg);
+        line-height: 1.4;
 
         br {
             display: none;
         }
+    }
+
+    .activeGreen_carbonIndex_info-box_bnr {
+        height: 400px;
+        padding: 40px 20px;
+    }
+
+    .activeGreen_carbonIndex_title {
+        font-size: var(--font-title-xs);
     }
 
     .activeGreen_carbonIndex_info-box_bnr {
@@ -1041,11 +1247,11 @@ body {
     }
 
     .activeGreen_carbonIndex_number {
-        font-size: 80px;
+        font-size: 50px;
     }
 
     .activeGreen_carbonIndex_unit {
-        font-size: 32px;
+        font-size: var(--font-title-xl);
     }
 
     .activeGreen_transform,
@@ -1055,19 +1261,19 @@ body {
 
     .activeGreen_transform_content,
     .activeGreen_cycle_content {
-        min-height: 280px;
+        min-height: 100px;
         padding: 32px 24px 120px;
     }
 
     .activeGreen_transform_title,
     .activeGreen_cycle_title {
-        font-size: 24px;
+        font-size: var(--font-title-md);
         max-width: 100%;
     }
 
     .activeGreen_transform_desc,
     .activeGreen_cycle_desc {
-        font-size: 16px;
+        font-size: var(--font-md);
         max-width: 100%;
         margin-bottom: 60px;
     }
@@ -1078,36 +1284,45 @@ body {
         bottom: 32px;
     }
 
-    .activeGreen_transform_icon {
-        width: 160px;
-        right: 24px;
-        bottom: 32px;
+    .activeGreen_transform_icon,
+    .activeGreen_cycle_icon {
+        width: 150px;
+        right: 40px;
+        bottom: 60px;
     }
 
-    .activeGreen_cycle_icon {
-        width: 160px;
-        right: 24px;
-        bottom: 32px;
+    .activeGreen_transform_item:nth-child(2) .activeGreen_transform_icon {
+        right: 72px;
+        bottom: 62px;
+        width: 100px;
     }
+
+    .activeGreen_cycle_item:nth-child(1) .activeGreen_cycle_icon {
+        top: 80px;
+        right: 10px;
+        width: 85%;
+        height: auto;
+    }
+
 
     .activeGreen_digital {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .activeGreen_digital_content {
-        min-height: 260px;
-        padding: 24px 20px 100px;
+        min-height: 200px;
     }
 
     .activeGreen_digital_title {
-        font-size: 20px;
+        font-size: var(--font-title-sm);
         margin-bottom: 12px;
     }
 
     .activeGreen_digital_icon {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         bottom: 20px;
+        right: -10px;
     }
 
     .activeGreen_nature {
@@ -1134,28 +1349,15 @@ body {
         padding-bottom: 0;
     }
 
-    .environment_link_list {
-        flex-direction: column;
-    }
 
     .environment_link_item {
         height: auto;
         padding: 24px;
     }
 
-    .activeGreen_reference {
-        flex-direction: column;
-    }
-
-    .activeGreen_reference_title {
-        width: 100%;
-        margin-bottom: 32px;
-    }
-
     .activeGreen_modal_content {
-        width: 95%;
-        padding: 24px;
-        max-height: 90vh;
+        padding: 30px;
+        max-height: 70vh;
         overflow-y: auto;
     }
 
@@ -1165,14 +1367,28 @@ body {
     }
 }
 
-/* 320px 이하 모바일 */
-@media screen and (max-width: 320px) {
+/* 480px 이하 모바일 */
+@media screen and (max-width: 480px) {
+    .divider_wrap {
+        margin-bottom: 60px;
+    }
+
+    .info_section {
+        margin-bottom: 80px;
+    }
+
+
+
     .activeGreen_header_title {
-        font-size: 2em;
+        font-size: var(--font-title-xxl);
     }
 
     .activeGreen_header_subtitle {
-        font-size: 22px;
+        font-size: var(--font-title-lg);
+    }
+
+    .activeGreen_header_desc {
+        font-size: var(--font-md);
     }
 
     .activeGreen_carbonIndex_info-box_bnr {
@@ -1180,17 +1396,17 @@ body {
     }
 
     .activeGreen_carbonIndex_number {
-        font-size: 60px;
+        font-size: 40px;
         line-height: 1.2;
     }
 
     .activeGreen_carbonIndex_unit {
-        font-size: 24px;
+        font-size: var(--font-title-xl);
     }
 
     .activeGreen_carbonIndex_button {
         padding: 12px 32px;
-        font-size: 16px;
+        font-size: var(--font-sm);
         margin-top: 24px;
     }
 
@@ -1199,9 +1415,13 @@ body {
     .activeGreen_digital_mainTitle,
     .activeGreen_nature_mainTitle,
     .environment_title {
-        font-size: 24px;
+        font-size: 23px;
         line-height: 1.4;
         margin-bottom: 24px;
+    }
+
+    .environment_link_text {
+        font-size: var(--font-md);
     }
 
     .activeGreen_digital {
@@ -1210,18 +1430,19 @@ body {
 
     .activeGreen_transform_content,
     .activeGreen_cycle_content {
-        min-height: 240px;
+        min-height: 120px;
         padding: 24px 20px 100px;
     }
 
     .activeGreen_transform_title,
-    .activeGreen_cycle_title {
-        font-size: 22px;
+    .activeGreen_cycle_title,
+    .activeGreen_digital_title {
+        font-size: var(--font-title-md)
     }
 
     .activeGreen_transform_desc,
     .activeGreen_cycle_desc {
-        font-size: 14px;
+        font-size: var(--font-sm);
         margin-bottom: 40px;
     }
 
@@ -1233,17 +1454,25 @@ body {
     .activeGreen_transform_icon,
     .activeGreen_cycle_icon {
         width: 120px;
-        right: 20px;
-        bottom: 24px;
+        right: 40px;
+        bottom: 64px;
+    }
+
+    .activeGreen_transform_item:nth-child(2) .activeGreen_transform_icon {
+        right: 62px;
+        bottom: 52px;
+        width: 90px;
+    }
+
+    .activeGreen_cycle_item:nth-child(1) .activeGreen_cycle_icon {
+        top: 60px;
+        right: 10px;
+        width: 85%;
+        height: auto;
     }
 
     .activeGreen_digital_content {
-        min-height: 220px;
-        padding: 20px 16px 80px;
-    }
-
-    .activeGreen_digital_title {
-        font-size: 18px;
+        min-height: 120px;
     }
 
     .activeGreen_digital_icon {
@@ -1262,11 +1491,11 @@ body {
 
     .activeGreen_nature_list li,
     .nature_tag_list li {
-        font-size: 16px;
+        font-size: var(--font-md);
     }
 
     .environment_desc {
-        font-size: 14px;
+        font-size: 16px;
 
         br {
             display: none;
@@ -1274,7 +1503,7 @@ body {
     }
 
     .environment_link_text {
-        font-size: 18px;
+        font-size: var(--font-lg);
     }
 
     .activeGreen_reference_title {
@@ -1287,7 +1516,9 @@ body {
     }
 
     .activeGreen_modal_content {
-        padding: 20px 16px;
+        width: 80%;
+        padding: 25px;
+        max-height: 70vh;
     }
 
     .activeGreen_modal_title {
